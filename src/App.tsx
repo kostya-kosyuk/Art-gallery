@@ -6,12 +6,17 @@ import Checkout from './pages/Checkout';
 import Favorites from './pages/Favorites';
 import PageNotFound from './pages/PageNotFound';
 import ArtWorkPage from './pages/ArtworkPage';
+import Header from './components/Header';
 
 function App() {
   return (
-    <Box>
+    <Box
+      sx={{
+        position: 'relative',
+      }}
+    >
 
-      {/* <Header /> */}
+      <Header />
 
       <Box component='main'>
         <div>
