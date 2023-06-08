@@ -1,6 +1,7 @@
 import { Box, IconButton, InputAdornment, List, ListItem, ListItemText, TextField } from "@mui/material";
-import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
+import CustomNavButton from "./components/NavButton";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -56,18 +57,22 @@ const Header = () => {
                         alignItems: 'center',
                     }}
                 >
-                    <ListItem component={Link} to="/" button>
-                        <ListItemText primary="Artworks" />
-                    </ListItem>
-                    <ListItem component={Link} to="/about" button>
-                        <ListItemText primary="Artists" />
-                    </ListItem>
-                    <ListItem component={Link} to="/services" button>
-                        <ListItemText primary="Послуги" />
-                    </ListItem>
-                    <ListItem component={Link} to="/contact" button>
-                        <ListItemText primary="Контакти" />
-                    </ListItem>
+                    <CustomNavButton
+                        linkTo="/"
+                        title={'Artworks'}
+                    />
+                    <CustomNavButton
+                        linkTo="/about"
+                        title={'Artists'}
+                    />
+                    <CustomNavButton
+                        linkTo="/services"
+                        title={'Послуги'}
+                    />
+                    <CustomNavButton
+                        linkTo="/contact"
+                        title={'Контакти'}
+                    />
                 </List>
                 <TextField
                     size="small"
@@ -103,12 +108,14 @@ const Header = () => {
                         alignItems: 'center',
                     }}
                 >
-                    <ListItem component={Link} to="favourites" button>
-                        <ListItemText primary="Favourites" />
-                    </ListItem>
-                    <ListItem component={Link} to="checkout" button>
-                        <ListItemText primary="Checkout" />
-                    </ListItem>
+                    <CustomNavButton
+                        linkTo="favourites"
+                        title={'Favourites'}
+                    />
+                    <CustomNavButton
+                        linkTo="checkout"
+                        title={'Checkout'}
+                    />
                     <ListItem button>
                         <ListItemText primary="Register" />
                     </ListItem>
