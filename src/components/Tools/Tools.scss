@@ -1,0 +1,53 @@
+.tools {
+  display: flex;
+  gap: 24px;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    background: none;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .6px;
+    transition: all .3s;
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background: #000;
+      border: 1px solid #000;
+      
+      .filterIcon__p {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__category {
+    width: 300px;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+}
+
+.category {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+
+  &__list {
+    display: flex;
+    gap: 18px;
+    padding: 8px 12px;
+    margin: 0;
+  }
+
+  &__item {
+    list-style: none;
+    min-width: max-content;
+  }
+}
