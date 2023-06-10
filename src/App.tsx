@@ -5,11 +5,12 @@ import Checkout from './pages/Checkout';
 import Favorites from './pages/Favorites';
 import PageNotFound from './pages/PageNotFound';
 import ArtWorkPage from './pages/ArtworkPage';
+import Header from './components/Header/Header';
 
 function App() {
   return (
         <>
-          <header />
+          <Header />
 
           <main>
             <div>

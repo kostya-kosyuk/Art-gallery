@@ -1,0 +1,92 @@
+@import '../../styles/_utils/variables';
+@import '../../styles/_utils/mixins';
+
+.header {
+    @include header-height;
+    @include padding-horizontal;
+    @include flex-row;
+
+    justify-content: space-between;
+
+}
+
+.logo {
+    height: 100%;
+
+    &__link {
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__image {
+            height: 100%;
+            max-height: 100%;
+
+            @include logo-width;
+        }
+    }
+}
+
+.menu_container {
+    height: 100%;
+
+    @include flex-row;
+}
+
+.nav_container {
+    height: 100%;
+
+    &__list {
+        height: 100%;
+
+        @include list-reset;
+        @include flex-row;
+
+        li:not(:first-child) {
+            margin-left: 10px;
+        }
+
+        li {
+            height: 100%;
+
+            @include flex-row
+        }
+    }
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+
+    font-size: 13px;
+
+    line-height: 18px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+    border-color: #000;
+    border-width: 1px;
+
+    transition: 200ms ease-in-out;
+
+    @include link-reset;
+    @include button-padding;
+}
+
+.searchButton {
+    height: 100%;
+
+    @include padding-horizontal;
+    @include flex-row;
+
+    &__img {
+        height: 21px;
+        width: 21px;
+    }
+}

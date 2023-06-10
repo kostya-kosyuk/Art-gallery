@@ -1,10 +1,8 @@
-import { Box } from "@mui/material";
-
 const ArtWorkPage = () => {
     return (
-        <Box>
+        <div>
             Page: ArtworkPage currently in work
-        </Box>
+        </div>
     );
 };
 

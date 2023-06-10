@@ -1,10 +1,8 @@
-import { Box } from "@mui/material";
-
 const Favourites = () => {
     return (
-        <Box>
+        <div>
             Page: Favourites currently in work
-        </Box>
+        </div>
     );
 };
 

@@ -1,0 +1,53 @@
+@import './variables';
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin padding-horizontal {
+    padding-left: map-get($padding-map, mobile);
+    padding-right: map-get($padding-map, mobile);
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+        padding-left: map-get($padding-map, tablet);
+        padding-right: map-get($padding-map, tablet);
+    }
+}
+
+@mixin header-height {
+    height: map-get($header-height-map, mobile);
+    max-height: map-get($header-height-map, mobile);
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+        height: map-get($header-height-map, tablet);
+        max-height: map-get($header-height-map, tablet);
+    }
+}
+
+@mixin logo-width {
+    width: map-get($header-height-map, mobile) - 10px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+        width: map-get($header-height-map, tablet) - 10px;
+    }
+}
+
+@mixin button-padding {
+    padding: 3px 20px;
+
+    @media (min-width: map-get($breakpoints, tablet)) {
+        padding: 6px 20px;
+    }
+}
+
+@mixin list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin link-reset {
+    text-decoration: none;
+}

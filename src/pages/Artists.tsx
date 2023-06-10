@@ -1,10 +1,8 @@
-import { Box } from "@mui/material";
-
 const Artists = () => {
     return (
-        <Box>
+        <div>
             Page: Artists currently in work
-        </Box>
+        </div>
     );
 };
 
