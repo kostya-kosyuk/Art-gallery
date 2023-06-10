@@ -7,16 +7,19 @@ import Favorites from './pages/Favorites';
 import PageNotFound from './pages/PageNotFound';
 import ArtWorkPage from './pages/ArtworkPage';
 import Header from './components/Header';
+import { Tools } from './components/Tools';
 
 function App() {
   return (
     <Box
-      sx={{
-        position: 'relative',
-      }}
+      // sx={{
+      //   position: 'relative',
+      // }}
     >
 
-      <Header />
+      {/* <Header /> */}
+
+      <Tools />
 
       <Box component='main'>
         <div>
