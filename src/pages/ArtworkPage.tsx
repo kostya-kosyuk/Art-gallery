@@ -1,10 +1,10 @@
-import { Box } from "@mui/material";
+// import { Box } from "@mui/material";
 
-const ArtWorkPage = () => {
+const ArtWorkPage: React.FC = () => {
     return (
-        <Box>
-            Page: ArtworkPage currently in work
-        </Box>
+      <div>
+        11111
+      </div>
     );
 };
 

@@ -1,10 +1,10 @@
-import { Box } from "@mui/material";
+import React from "react";
 
-const Artists = () => {
+const Artists: React.FC = () => {
     return (
-        <Box>
-            Page: Artists currently in work
-        </Box>
+      <div>
+        Page: Artists currently in work
+      </div>
     );
 };
 

@@ -1,10 +1,15 @@
-import { Box } from "@mui/material";
+// import { Box } from "@mui/material";
 
 const PageNotFound = () => {
     return (
-        <Box>
-            Page: PageNotFound currently in work
-        </Box>
+      <>
+        <p>
+          PageNotFound
+        </p>
+      </>
+        // <Box>
+        //     Page: PageNotFound currently in work
+        // </Box>
     );
 };
 
