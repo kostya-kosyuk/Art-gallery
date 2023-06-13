@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Artworks />} />
             <Route path="artworks" element={<Artworks />} />
-            <Route path='artworks/1' element={<ArtWorkPage />}/>
+            <Route path='artworks/:filter' element={<ArtWorkPage />}/>
 
             <Route path="artists" element={<Artists />} />
 
