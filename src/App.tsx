@@ -1,11 +1,11 @@
-import { Route, Routes } from 'react-router-dom';
-import Artists from './pages/Artists';
-import Artworks from './pages/Artworks';
-import Checkout from './pages/Checkout';
-import Favorites from './pages/Favorites';
-import PageNotFound from './pages/PageNotFound';
-import ArtWorkPage from './pages/ArtworkPage';
-import { Tools } from './components/Tools';
+import { Route, Routes } from "react-router-dom";
+import Artists from "./pages/Artists";
+import { Artworks } from "./pages/Artworks/Artworks";
+import Checkout from "./pages/Checkout";
+import Favorites from "./pages/Favorites";
+import PageNotFound from "./pages/PageNotFound";
+// import ArtWorkPage from './pages/ArtworkPage';
+import { Tools } from "./components/Tools";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Artworks />} />
             <Route path="artworks" element={<Artworks />} />
-            <Route path='artworks/:filter' element={<ArtWorkPage />}/>
+            <Route path="artworks/:filter" element={<Artworks />} />
 
             <Route path="artists" element={<Artists />} />
 

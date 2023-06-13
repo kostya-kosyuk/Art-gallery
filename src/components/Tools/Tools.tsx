@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 export const Tools: React.FC = () => {
   const [allCategories, setAllCategories] = useState<string[]>(['All media']);
   const [selectedCategory, setSelectedCategory] = useState<string>(allCategories[0]);
-  const [filtersIsOpen, setFiltersIsOpen] = useState<boolean>(true);
+  const [filtersIsOpen, setFiltersIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const categories: string[] = [];
