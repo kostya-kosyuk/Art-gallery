@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-@import './variables';
-
-=======
 @mixin on768 {
   @media (min-width: 768px) {
     @content;
@@ -19,4 +15,3 @@
     @content;
   }
 }
->>>>>>> 0761246751b5ca68e7a763e4ba7c62d609ec279a

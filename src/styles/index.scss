@@ -1,37 +1,20 @@
-@font-face {
-    font-family: 'Acumin Pro';
-    src: url(./fonts/AcuminPro-Italic.woff2) format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap
+@import './_utils/reset';
+@import './_utils/normolize';
+@import './_utils/variables';
+@import './_utils/mixins';
+@import './_utils/container';
+@import './fonts/fonts';
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-@font-face {
-    font-family: 'Acumin Pro';
-    src: url(./fonts/AcuminPro-Bold.woff2) format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap
+body {
+    font-family: 'Acumin Pro', sans-serif;
+    line-height: 1em;
 }
 
-@font-face {
-    font-family: 'Acumin Pro';
-    src: url(./fonts/AcuminPro-Regular.woff2) format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap
+a {
+    all: unset;
 }
-
-// * {
-//     margin: 0;
-//     padding: 0;
-// }
-
-// body {
-//     font-family: 'Acumin Pro', sans-serif;
-//     line-height: 1em;
-// }
-
-// a {
-//     all: unset;
-// }
