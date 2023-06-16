@@ -1,2 +1,22 @@
+<<<<<<< HEAD
 @import './variables';
 
+=======
+@mixin on768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin on1024 {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin on1280 {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+>>>>>>> 0761246751b5ca68e7a763e4ba7c62d609ec279a
