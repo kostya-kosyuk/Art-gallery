@@ -1,10 +1,11 @@
-@import '../../utils/mixins';
+@import '../../styles/_utils/mixins';
 
 .artworks {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  gap: 12px;
+  // width: 100%;
+  grid-gap: 12px;
+  row-gap: 0.01px;
 
   @include on768 {
     grid-template-columns: repeat(3, 1fr);
