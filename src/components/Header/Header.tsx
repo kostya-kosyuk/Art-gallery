@@ -1,4 +1,3 @@
-import CustomNavButton from "./components/NavButton";
 import { Link } from "react-router-dom";
 import header from './Header.module.scss';
 
