@@ -1,10 +1,11 @@
-import { Box } from "@mui/material";
+// import { Box } from "@mui/material";
 
 const Favourites = () => {
     return (
-        <Box>
-            Page: Favourites currently in work
-        </Box>
+      <></>
+        // <Box>
+        //     Page: Favourites currently in work
+        // </Box>
     );
 };
 

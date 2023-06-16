@@ -1,10 +1,11 @@
-import { Box } from "@mui/material";
+// import { Box } from "@mui/material";
 
 const Checkout = () => {
     return (
-        <Box>
-            Page: Checkout currently in work
-        </Box>
+      <></>
+        // <Box>
+        //     Page: Checkout currently in work
+        // </Box>
     );
 };
 

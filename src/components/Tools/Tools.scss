@@ -1,0 +1,71 @@
+@import '../../styles/_utils/mixins';
+
+.tools {
+  display: flex;
+  gap: 12px;
+  height: 40px;
+  margin-bottom: 20px;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    background: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    transition: all .3s;
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background: #000;
+      border: 1px solid #000;
+      
+      .filterIcon__p {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__category {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+}
+
+.category {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+
+  &__list {
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 11px 12px 4px;
+
+    @include on768 {
+      // padding: 13px 14px 8px;
+    }
+  }
+  
+  &__item {
+    list-style: none;
+    min-width: max-content;
+    font-weight: bold;
+    color: #B9B9B9;
+    transition: all .3s;
+
+    &:hover {
+      cursor: pointer;
+      color: #000;
+    }
+
+    &--active {
+      color: #000;
+    }
+  }
+}
