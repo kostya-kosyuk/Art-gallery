@@ -129,7 +129,7 @@
 
     &__button {
         height: 100%;
-        width: 30px;
+        width: 20px;
 
         @include flex-row;
 
@@ -138,6 +138,9 @@
 
         background-color: transparent;
         border: none;
+
+        z-index: 3;
+        cursor: pointer;
 
         img {
             height: 20px;
@@ -193,7 +196,7 @@
 }
 
 .link {
-    font-weight: 700;
+    font-weight: bold;
 
     height: 100%;
 
