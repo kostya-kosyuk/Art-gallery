@@ -13,7 +13,7 @@ export const Artworks: React.FC = () => {
     default: 5,
     1280: 4,
     1024: 3,
-    768: 2
+    768: 2,
   };
 
   return (
@@ -23,7 +23,7 @@ export const Artworks: React.FC = () => {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {DATA_test.map((dataArt) => (
+        {DATA.map((dataArt) => (
           <React.Fragment key={dataArt.id}>
             <Artwork dataArt={dataArt} />
           </React.Fragment>
