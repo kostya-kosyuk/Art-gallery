@@ -1,6 +1,6 @@
 import './Artists.scss';
 
-const Artists = () => {
+export const Artists = () => {
     return (
         <div className='container'>
             <div className='grid-container'>
@@ -140,5 +140,3 @@ const Artists = () => {
         </div>
     );
 };
-
-export default Artists;
