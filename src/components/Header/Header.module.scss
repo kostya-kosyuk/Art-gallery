@@ -8,13 +8,13 @@
 
     &_inHeader {
         width: 100%;
-        max-width: 1880px;
+        // max-width: 1880px;
 
         margin-left: auto;
         margin-right: auto;
 
         @include header-height;
-        @include padding-horizontal;
+        // @include padding-horizontal;
         @include flex-row;
 
         justify-content: space-between;

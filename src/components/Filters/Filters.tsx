@@ -11,6 +11,9 @@ type Props = {
 }
 
 export const Filters:React.FC<Props> = ({ filtersStatus,filtersCloser }) => {
+  // scroll disable
+  filtersStatus ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+
   const handlerExit = () => {
     filtersCloser(false);
   }
@@ -24,7 +27,9 @@ export const Filters:React.FC<Props> = ({ filtersStatus,filtersCloser }) => {
         onClick={handlerExit}
       ></div>
 
-      <DefaultFilters />
+      <div className="filters__wrapper">
+        <DefaultFilters />
+      </div>
     </div>
   );
 };

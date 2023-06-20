@@ -1,3 +1,4 @@
+@import '../../styles/_utils/variables';
 @import '../../styles/_utils/mixins';
 
 .tools {
@@ -6,24 +7,35 @@
   height: 40px;
   margin-bottom: 20px;
 
+  @include on768 {
+    height: 50px;
+  }
+  @include on1024 {}
+  @include on1280 {}
+
   &__button {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4px;
-    border: 1px solid lightgrey;
+    border: 1px solid $color-border;
     border-radius: 4px;
     background: none;
     padding: 8px 12px;
     font-weight: bold;
     transition: all .3s;
 
+    @include on768 {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+
     &:hover {
       cursor: pointer;
       color: #fff;
       background: #000;
       border: 1px solid #000;
-      
+
       .filterIcon__p {
         fill: #fff;
       }
@@ -34,21 +46,34 @@
     width: 100%;
     overflow: hidden;
     overflow-x: scroll;
+
+    @include on768 {
+      font-size: 16px;
+    }
   }
 }
 
 .category {
-  border: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  border: 1px solid $color-border;
   border-radius: 4px;
 
   &__list {
     display: flex;
     gap: 18px;
     margin: 0;
-    padding: 11px 12px 4px;
+    padding: 0 12px;
 
     @include on768 {
-      // padding: 13px 14px 8px;
+      padding: 0 16px;
+      gap: 20px;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
+    @include on1280 {
     }
   }
   
@@ -56,12 +81,12 @@
     list-style: none;
     min-width: max-content;
     font-weight: bold;
-    color: #B9B9B9;
+    color: $color-border;
     transition: all .3s;
 
     &:hover {
       cursor: pointer;
-      color: #000;
+      color: $color-hover;
     }
 
     &--active {
