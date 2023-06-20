@@ -1,21 +1,24 @@
+@import '../../styles/_utils/variables';
 @import '../../styles/_utils/mixins';
+$grid-col-min-width: 0;
+$grid-col-max-width: 1fr;
 
-.artworks {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  // width: 100%;
-  grid-gap: 12px;
-  row-gap: 0.01px;
+.my-masonry-grid {
+  display: flex;
+  margin-left: -16px;
+  /* Забезпечує відступи між колонками */
+  width: auto;
 
-  @include on768 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
   @include on1024 {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 4px;
   }
   @include on1280 {
-    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
   }
+}
+
+.my-masonry-grid_column {
+  padding-left: 16px;
+  /* Забезпечує відступи між елементами */
+  background-clip: padding-box;
 }
