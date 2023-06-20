@@ -17,4 +17,8 @@ body {
 
 a {
     all: unset;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
