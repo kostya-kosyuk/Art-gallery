@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Artists from './pages/Artists';
+import { ArtistsPage } from './pages/ArtistsPage';
 import { Artworks } from './pages/Artworks/Artworks';
 import Checkout from './pages/Checkout';
 import Favorites from './pages/Favorites';
 import PageNotFound from './pages/PageNotFound';
-// import ArtWorkPage from './pages/ArtworkPage';
-import Header from './components/Header/Header';
+import Header from './components/Header';
 import { Tools } from './components/Tools';
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
             <Route path="artworks" element={<Artworks />} />
             <Route path="artworks/:filter" element={<Artworks />} />
 
-            <Route path="artists" element={<Artists />} />
+            <Route path="artists" element={<ArtistsPage />} />
 
             <Route path="checkout" element={<Checkout />} />
 
