@@ -20,28 +20,28 @@ const Header = () => {
                 <nav className={`${header.nav_container}`}>
                     <ul className={`${header.nav_container__list}`}>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="#/"
+                            <Link
+                                to="/artworks"
                                 className={`${header.link}`}
-                            >Artworks</a>
+                            >Artworks</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="#/"
+                            <Link
+                                to="/artists"
                                 className={`${header.link}`}
-                            >Artists</a>
+                            >Artists</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="#/"
+                            <Link
+                                to="/auctions"
                                 className={`${header.link}`}
-                            >Auctions</a>
+                            >Auctions</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="#/"
+                            <Link
+                                to="/news"
                                 className={`${header.link}`}
-                            >News</a>
+                            >News</Link>
                         </li>
                         <li className={`${header.search_container}`}>
                             <form action="" className={`${header.search}`}>
@@ -92,13 +92,13 @@ const Header = () => {
                                     href="#/"
                                     className={`${header.searchButton}`}
                                 >
-                                    <img src="./searchIcon.svg" alt="search" />
+                                    <img src="/searchIcon.svg" alt="search" />
                                 </a>
                             </li>
                         </ul>
                     </nav>
                     <a href="#/" className={`${header.menuButton}`}>
-                        <img src="./menuIcon.svg" alt="menu" />
+                        <img src="/menuIcon.svg" alt="menu" />
                     </a>
                 </div>
             </div>
