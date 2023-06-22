@@ -96,37 +96,10 @@
         margin-left: 30px;
         margin-right: 30px;
     }
-}
 
-.search {
-    position: relative;
-
-    width: 100%;
-    max-width: 100%;
-
-
-    overflow: hidden;
-
-    border-radius: 5px;
-    border: 1px solid $color-border;
-
-    @include flex-row;
-    @include not-mobile;
-    @include search-adaptive;
-
-    &::before {
-        content: '';
-
-        height: 100%;
-        width: 100%;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        background-color: $color-background;
-    }
-
+    @media (max-width: map-get($breakpoints, tablet)) {
+        display: none !important;
+      
     &__button {
         height: 100%;
         width: 20px;
@@ -244,6 +217,9 @@
     margin-left: 10px;
 
     padding-left: 5px;
+
+    background-color: transparent;
+    border: none;
 
     @include flex-row;
 
