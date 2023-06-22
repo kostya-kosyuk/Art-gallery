@@ -6,6 +6,7 @@ import Favorites from './pages/Favorites';
 import PageNotFound from './pages/PageNotFound';
 import Header from './components/Header';
 import { Tools } from './components/Tools';
+import IndividualArtistPage from './pages/IndividualArtistPage';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
             <Route path="checkout" element={<Checkout />} />
 
             <Route path="favourites" element={<Favorites />} />
+
+            <Route path="artist/:artistId" element={<IndividualArtistPage />}/>
 
             <Route path="*" element={<PageNotFound />} />
           </Routes>

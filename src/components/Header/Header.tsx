@@ -33,28 +33,28 @@ const Header = () => {
                 <nav className={`${header.nav_container}`}>
                     <ul className={`${header.nav_container__list}`}>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="/artworks"
+                            <Link
+                                to="/artworks"
                                 className={`${header.link}`}
-                            >Artworks</a>
+                            >Artworks</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="/artists"
+                            <Link
+                                to="/artists"
                                 className={`${header.link}`}
-                            >Artists</a>
+                            >Artists</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="/auctions"
+                            <Link
+                                to="/auctions"
                                 className={`${header.link}`}
-                            >Auctions</a>
+                            >Auctions</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="/news"
+                            <Link
+                                to="/news"
                                 className={`${header.link}`}
-                            >News</a>
+                            >News</Link>
                         </li>
                         <li className={`${header.search_container}`}>
                             <Search />
