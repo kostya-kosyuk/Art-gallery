@@ -99,7 +99,8 @@
 
     @media (max-width: map-get($breakpoints, tablet)) {
         display: none !important;
-      
+    }
+
     &__button {
         height: 100%;
         width: 20px;

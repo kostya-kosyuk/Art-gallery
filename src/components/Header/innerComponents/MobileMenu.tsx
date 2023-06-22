@@ -33,10 +33,10 @@ const MobileMenu = ({ isMenuOpen, handleCloseMenu }: Props) => {
                 <nav>
                     <ul onClick={handleMenuClick}>
                         <li>
-                            <Link to="/artists">Artists</Link>
+                            <Link to="/artworks">Artworks</Link>
                         </li>
                         <li>
-                            <Link to="/artworks">Artworks</Link>
+                            <Link to="/artists">Artists</Link>
                         </li>
                     </ul>
                     <ul onClick={handleMenuClick}>
