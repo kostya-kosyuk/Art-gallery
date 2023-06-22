@@ -1,10 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import ArtistsPage from './pages/ArtistsPage';
+import { ArtistsPage } from './pages/ArtistsPage';
 import { Artworks } from './pages/Artworks/Artworks';
 import Checkout from './pages/Checkout';
 import Favorites from './pages/Favorites';
 import PageNotFound from './pages/PageNotFound';
-// import ArtWorkPage from './pages/ArtworkPage';
 import Header from './components/Header';
 import { Tools } from './components/Tools';
 import IndividualArtistPage from './pages/IndividualArtistPage';
