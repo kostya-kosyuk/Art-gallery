@@ -8,13 +8,13 @@
 
     &_inHeader {
         width: 100%;
-        max-width: 1880px;
+        // max-width: 1880px;
 
         margin-left: auto;
         margin-right: auto;
 
         @include header-height;
-        @include padding-horizontal;
+        // @include padding-horizontal;
         @include flex-row;
 
         justify-content: space-between;
@@ -99,6 +99,46 @@
 
     @media (max-width: map-get($breakpoints, tablet)) {
         display: none !important;
+      
+    &__button {
+        height: 100%;
+        width: 20px;
+
+        @include flex-row;
+
+        position: absolute;
+        left: 10px;
+
+        background-color: transparent;
+        border: none;
+
+        z-index: 3;
+        cursor: pointer;
+
+        img {
+            height: 20px;
+            width: 20px;
+
+            padding-bottom: 2px;
+        }
+    }
+
+    &__input {
+        height: 40px;
+        width: 100%;
+
+        padding-left: 35px;
+        padding-right: 20px;
+
+        background-color: transparent;
+        border: none;
+
+        z-index: 2;
+
+        vertical-align: middle;
+
+        font-size: 15px;
+        font-weight: bold;
     }
 }
 
@@ -129,7 +169,7 @@
 }
 
 .link {
-    font-weight: 700;
+    font-weight: bold;
 
     height: 100%;
 

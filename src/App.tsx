@@ -1,38 +1,39 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
-import Artists from './pages/Artists';
-import Artworks from './pages/Artworks';
+import { Route, Routes } from 'react-router-dom';
+import { ArtistsPage } from './pages/ArtistsPage';
+import { Artworks } from './pages/Artworks/Artworks';
 import Checkout from './pages/Checkout';
 import Favorites from './pages/Favorites';
 import PageNotFound from './pages/PageNotFound';
-import ArtWorkPage from './pages/ArtworkPage';
-import Header from './components/Header/Header';
+import Header from './components/Header';
+import { Tools } from './components/Tools';
 
 function App() {
   return (
-        <>
-          <Header />
+    <>
+      <Header />
 
-          <main>
-            <div>
-              <Routes>
-                <Route path="/" element={<Artworks />} />
-                <Route path="home" element={<Navigate to="/" replace />} />
+      <Tools />
 
-                <Route path="artists" element={<Artists />} />
+      <main>
+        <div>
+          <Routes>
+            <Route path="/" element={<Artworks />} />
+            <Route path="artworks" element={<Artworks />} />
+            <Route path="artworks/:filter" element={<Artworks />} />
 
-                <Route path="artworks/artwork" element={<ArtWorkPage />} />
+            <Route path="artists" element={<ArtistsPage />} />
 
-                <Route path="checkout" element={<Checkout />} />
+            <Route path="checkout" element={<Checkout />} />
 
-                <Route path="favourites" element={<Favorites />} />
+            <Route path="favourites" element={<Favorites />} />
 
-                <Route path="*" element={<PageNotFound />} />
-              </Routes>
-            </div>
-          </main>
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </div>
+      </main>
 
-          {/* <Footer /> */}
-        </>
+      {/* <Footer /> */}
+    </>
   );
 }
 

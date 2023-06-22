@@ -16,7 +16,7 @@ const Header = () => {
     };
 
     return (
-        <header className={`${header.header}`}>
+        <header className={`${header.header} container`}>
             <div className={`${header.header_inHeader}`}>
                 <div className={`${header.logo}`}>
                     <Link
@@ -34,25 +34,25 @@ const Header = () => {
                     <ul className={`${header.nav_container__list}`}>
                         <li className={`${header.desktop}`}>
                             <a
-                                href="#/"
+                                href="/artworks"
                                 className={`${header.link}`}
                             >Artworks</a>
                         </li>
                         <li className={`${header.desktop}`}>
                             <a
-                                href="#/"
+                                href="/artists"
                                 className={`${header.link}`}
                             >Artists</a>
                         </li>
                         <li className={`${header.desktop}`}>
                             <a
-                                href="#/"
+                                href="/auctions"
                                 className={`${header.link}`}
                             >Auctions</a>
                         </li>
                         <li className={`${header.desktop}`}>
                             <a
-                                href="#/"
+                                href="/news"
                                 className={`${header.link}`}
                             >News</a>
                         </li>
@@ -66,31 +66,31 @@ const Header = () => {
                         <ul className={`${header.nav_container__list}`}>
                             <li>
                                 <a
-                                    href="#/"
+                                    href="/pricing"
                                     className={`${header.link}`}
                                 >Pricing</a>
                             </li>
                             <li>
                                 <a
-                                    href="#/"
+                                    href="/sell"
                                     className={`${header.link}`}
                                 >Sell</a>
                             </li>
                             <li>
                                 <a
-                                    href="#/"
+                                    href="/register"
                                     className={`${header.button}`}
                                 >Register</a>
                             </li>
                             <li>
                                 <a
-                                    href="#/"
+                                    href="/login"
                                     className={`${header.link}`}
                                 >Login</a>
                             </li>
                             <li className={`${header.searchButton_container}`}>
                                 <a
-                                    href="#/"
+                                    href="/"
                                     className={`${header.searchButton}`}
                                 >
                                     <img src="/searchIcon.svg" alt="search" />
