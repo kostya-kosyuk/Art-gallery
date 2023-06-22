@@ -10,7 +10,7 @@ const maxHeight = 140;
 
 const ExpandableElement = ({ content }: Props) => {
     const [expanded, setExpanded] = useState(false);
-    const contentRef = useRef(null);
+    const contentRef = useRef<null | HTMLDivElement>(null);
     const [contentHeight, setContentHeight] = useState(0);
 
     const toggleExpanded = () => {
@@ -24,7 +24,7 @@ const ExpandableElement = ({ content }: Props) => {
         if (clientHeight > maxHeight) {
             setContentHeight(clientHeight);
         }
-    }, [0]);
+    }, []);
 
     return (
         <div className={`expandable-element ${expanded ? 'expanded' : ''}`}>
