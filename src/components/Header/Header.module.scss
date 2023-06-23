@@ -161,18 +161,31 @@
     border: 1px solid black;
     border-radius: 3px;
 
+    outline: none;
+
     text-align: center;
 
     transition: 200ms ease-in-out;
 
     @include link-reset;
     @include button-adaptive;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #222;
+      border: 1px solid #222;
+    }
 }
 
 .link {
+    background-color: white;
+
     font-weight: bold;
 
     height: 100%;
+
+    border: none;
+    outline: none;
 
     padding-left: 10px;
     padding-right: 10px;
@@ -189,6 +202,7 @@
     }
 
     &:hover {
+        cursor: pointer;
         color: $color-hover;
     }
 }

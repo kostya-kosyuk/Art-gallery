@@ -1,21 +1,33 @@
-import { Link } from "react-router-dom";
-import header from './Header.module.scss';
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Modal } from "../Modal";
 import MobileMenu from "./innerComponents/MobileMenu";
 import Search from "./innerComponents/Search";
+import logo from './logo.svg';
+import header from './Header.module.scss';
 
 const Header = () => {
-    const [isMenuOpen, setMenuOpen] = useState(false);
+  const [modal, setModal] = useState<string>('');
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-    const handleCloseMenu = () => {
-        setMenuOpen(false);
-    };
+  const handlerLogin = () => {
+    setModal('login');
+  }
 
-    const handleOpenMenu = () => {
-        setMenuOpen(true);
-    };
+  const handlerRegister = () => {
+    setModal('register');
+  }
+  
+  const handleCloseMenu = () => {
+     setMenuOpen(false);
+  };
 
-    return (
+  const handleOpenMenu = () => {
+     setMenuOpen(true);
+  };
+
+  return (
+     <>
         <header className={`${header.header} container`}>
             <div className={`${header.header_inHeader}`}>
                 <div className={`${header.logo}`}>
@@ -25,7 +37,7 @@ const Header = () => {
                     >
                         <img
                             className={`${header.logo__link__image}`}
-                            src="https://onlinegallery.art/_webblocks/images/logo.svg"
+                            src={logo}
                             alt="logo"
                         />
                     </Link>
@@ -77,16 +89,22 @@ const Header = () => {
                                 >Sell</a>
                             </li>
                             <li>
-                                <a
-                                    href="/register"
-                                    className={`${header.button}`}
-                                >Register</a>
+                                <button
+                                  type="button"
+                                  className={`${header.button}`}
+                                  onClick={handlerRegister}
+                                >
+                                  Register
+                                </button>
                             </li>
                             <li>
-                                <a
-                                    href="/login"
-                                    className={`${header.link}`}
-                                >Login</a>
+                                <button
+                                  type="button"
+                                  className={`${header.link}`}
+                                  onClick={handlerLogin}
+                                >
+                                  Login
+                                </button>
                             </li>
                             <li className={`${header.searchButton_container}`}>
                                 <a
@@ -108,6 +126,11 @@ const Header = () => {
             </div>
             <MobileMenu isMenuOpen={isMenuOpen} handleCloseMenu={handleCloseMenu}/>
         </header>
+
+        {modal.length > 0 && (
+          <Modal modalType={modal} setModal={setModal} />
+        )}
+      </>
     );
 };
 
