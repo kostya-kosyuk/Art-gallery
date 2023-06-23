@@ -1,4 +1,5 @@
 import ExpandableElement from '../ExpandableElement';
+import ProductList from '../ProductList';
 import TextComponent from '../TextComponent/TextComponent';
 import './IndividualArtist.scss';
 
@@ -29,17 +30,21 @@ const IndividualArtist = ({ id }: Props) => {
                     </div>
                 </div>
             </div>
-            <div className='nameSection'>
+            <div className='profile-section profile-section--nameSection'>
                 Linda Clerget
             </div>
-            <div className='information'>
+            <section className='profile-section profile-section--information'>
                 <p>Born: 1985</p>
                 <p>Hometown: Fontainebleau</p>
                 <p>Based in: Fontainebleau, France</p>
-            </div>
-            <div className='about'>
+            </section>
+            <section className='profile-section profile-section--about'>
                 <ExpandableElement content={<TextComponent text={text}/>}/>
-            </div>
+            </section>
+            <hr className="profile-section__space" />
+            <section className=''>
+                <ProductList items={[{}]} />
+            </section>
         </div>
     );
 };
