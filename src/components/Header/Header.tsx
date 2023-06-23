@@ -1,22 +1,33 @@
-import { Link } from "react-router-dom";
-import header from './Header.module.scss';
-import logo from './logo.svg';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Modal } from "../Modal";
+import MobileMenu from "./innerComponents/MobileMenu";
+import Search from "./innerComponents/Search";
+import logo from './logo.svg';
+import header from './Header.module.scss';
 
 const Header = () => {
   const [modal, setModal] = useState<string>('');
-  // const [registerModal, setRegisterModal] = useState<boolean>(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handlerLogin = () => {
     setModal('login');
   }
+
   const handlerRegister = () => {
     setModal('register');
   }
+  
+  const handleCloseMenu = () => {
+     setMenuOpen(false);
+  };
 
-    return (
-      <>
+  const handleOpenMenu = () => {
+     setMenuOpen(true);
+  };
+
+  return (
+     <>
         <header className={`${header.header} container`}>
             <div className={`${header.header_inHeader}`}>
                 <div className={`${header.logo}`}>
@@ -34,43 +45,31 @@ const Header = () => {
                 <nav className={`${header.nav_container}`}>
                     <ul className={`${header.nav_container__list}`}>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="/artworks"
+                            <Link
+                                to="/artworks"
                                 className={`${header.link}`}
-                            >Artworks</a>
+                            >Artworks</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="/artists"
+                            <Link
+                                to="/artists"
                                 className={`${header.link}`}
-                            >Artists</a>
+                            >Artists</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="/auctions"
+                            <Link
+                                to="/auctions"
                                 className={`${header.link}`}
-                            >Auctions</a>
+                            >Auctions</Link>
                         </li>
                         <li className={`${header.desktop}`}>
-                            <a
-                                href="/news"
+                            <Link
+                                to="/news"
                                 className={`${header.link}`}
-                            >News</a>
+                            >News</Link>
                         </li>
                         <li className={`${header.search_container}`}>
-                            <form action="" className={`${header.search}`}>
-                                <button
-                                    className={`${header.search__button}`}
-                                    type="submit"
-                                >
-                                    <img src="./searchIconGrey.svg" alt="search" />
-                                </button>
-                                <input
-                                    className={`${header.search__input}`}
-                                    type="search"
-                                    placeholder="Search..."
-                                />
-                            </form>
+                            <Search />
                         </li>
                     </ul>
                 </nav>
@@ -112,16 +111,20 @@ const Header = () => {
                                     href="/"
                                     className={`${header.searchButton}`}
                                 >
-                                    <img src="./searchIcon.svg" alt="search" />
+                                    <img src="/searchIcon.svg" alt="search" />
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                    <a href="/" className={`${header.menuButton}`}>
-                        <img src="./menuIcon.svg" alt="menu" />
-                    </a>
+                    <button
+                        className={`${header.menuButton} ${isMenuOpen ? 'open' : ''}`}
+                        onClick={handleOpenMenu}
+                    >
+                        <img src="/menuIcon.svg" alt="menu" />
+                    </button>
                 </div>
             </div>
+            <MobileMenu isMenuOpen={isMenuOpen} handleCloseMenu={handleCloseMenu}/>
         </header>
 
         {modal.length > 0 && (
