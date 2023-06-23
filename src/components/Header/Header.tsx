@@ -1,21 +1,28 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Modal } from "../Modal";
+// import { Modal } from "../Modal";
 import MobileMenu from "./innerComponents/MobileMenu";
 import Search from "./innerComponents/Search";
 import logo from './logo.svg';
 import header from './Header.module.scss';
+import { LoginModal } from "../LoginModal";
+import { RegistrationModal } from "../RegistrationModal";
+
+enum Modal {
+  login = 'login',
+  register = 'register',
+}
 
 const Header = () => {
   const [modal, setModal] = useState<string>('');
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handlerLogin = () => {
-    setModal('login');
+    setModal(Modal.login);
   }
 
   const handlerRegister = () => {
-    setModal('register');
+    setModal(Modal.register);
   }
   
   const handleCloseMenu = () => {
@@ -127,8 +134,12 @@ const Header = () => {
             <MobileMenu isMenuOpen={isMenuOpen} handleCloseMenu={handleCloseMenu}/>
         </header>
 
-        {modal.length > 0 && (
-          <Modal modalType={modal} setModal={setModal} />
+        {modal === Modal.register && (
+          <RegistrationModal modalType={modal} setModal={setModal} />
+        )}
+
+        {modal === Modal.login && (
+          <LoginModal modalType={modal} setModal={setModal} />
         )}
       </>
     );
