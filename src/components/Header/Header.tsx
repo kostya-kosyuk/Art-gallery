@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom";
 import header from './Header.module.scss';
+import logo from './logo.svg';
+import { useState } from "react";
+import { Modal } from "../Modal";
 
 const Header = () => {
+  const [modal, setModal] = useState<string>('');
+  // const [registerModal, setRegisterModal] = useState<boolean>(false);
+
+  const handlerLogin = () => {
+    setModal('login');
+  }
+  const handlerRegister = () => {
+    setModal('register');
+  }
+
     return (
+      <>
         <header className={`${header.header} container`}>
             <div className={`${header.header_inHeader}`}>
                 <div className={`${header.logo}`}>
@@ -12,7 +26,7 @@ const Header = () => {
                     >
                         <img
                             className={`${header.logo__link__image}`}
-                            src="https://onlinegallery.art/_webblocks/images/logo.svg"
+                            src={logo}
                             alt="logo"
                         />
                     </Link>
@@ -76,16 +90,22 @@ const Header = () => {
                                 >Sell</a>
                             </li>
                             <li>
-                                <a
-                                    href="/register"
-                                    className={`${header.button}`}
-                                >Register</a>
+                                <button
+                                  type="button"
+                                  className={`${header.button}`}
+                                  onClick={handlerRegister}
+                                >
+                                  Register
+                                </button>
                             </li>
                             <li>
-                                <a
-                                    href="/login"
-                                    className={`${header.link}`}
-                                >Login</a>
+                                <button
+                                  type="button"
+                                  className={`${header.link}`}
+                                  onClick={handlerLogin}
+                                >
+                                  Login
+                                </button>
                             </li>
                             <li className={`${header.searchButton_container}`}>
                                 <a
@@ -103,6 +123,11 @@ const Header = () => {
                 </div>
             </div>
         </header>
+
+        {modal.length > 0 && (
+          <Modal modalType={modal} setModal={setModal} />
+        )}
+      </>
     );
 };
 
