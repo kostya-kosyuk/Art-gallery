@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
 import header from './Header.module.scss';
+import { useState } from "react";
+import MobileMenu from "./innerComponents/MobileMenu";
+import Search from "./innerComponents/Search";
 
 const Header = () => {
+    const [isMenuOpen, setMenuOpen] = useState(false);
+
+    const handleCloseMenu = () => {
+        setMenuOpen(false);
+    };
+
+    const handleOpenMenu = () => {
+        setMenuOpen(true);
+    };
+
     return (
-        <header className={`${header.header}`}>
+        <header className={`${header.header} container`}>
             <div className={`${header.header_inHeader}`}>
                 <div className={`${header.logo}`}>
                     <Link
@@ -44,19 +57,7 @@ const Header = () => {
                             >News</Link>
                         </li>
                         <li className={`${header.search_container}`}>
-                            <form action="" className={`${header.search}`}>
-                                <button
-                                    className={`${header.search__button}`}
-                                    type="submit"
-                                >
-                                    <img src="/searchIconGrey.svg" alt="search" />
-                                </button>
-                                <input
-                                    className={`${header.search__input}`}
-                                    type="search"
-                                    placeholder="Search..."
-                                />
-                            </form>
+                            <Search />
                         </li>
                     </ul>
                 </nav>
@@ -65,31 +66,31 @@ const Header = () => {
                         <ul className={`${header.nav_container__list}`}>
                             <li>
                                 <a
-                                    href="#/"
+                                    href="/pricing"
                                     className={`${header.link}`}
                                 >Pricing</a>
                             </li>
                             <li>
                                 <a
-                                    href="#/"
+                                    href="/sell"
                                     className={`${header.link}`}
                                 >Sell</a>
                             </li>
                             <li>
                                 <a
-                                    href="#/"
+                                    href="/register"
                                     className={`${header.button}`}
                                 >Register</a>
                             </li>
                             <li>
                                 <a
-                                    href="#/"
+                                    href="/login"
                                     className={`${header.link}`}
                                 >Login</a>
                             </li>
                             <li className={`${header.searchButton_container}`}>
                                 <a
-                                    href="#/"
+                                    href="/"
                                     className={`${header.searchButton}`}
                                 >
                                     <img src="/searchIcon.svg" alt="search" />
@@ -97,11 +98,15 @@ const Header = () => {
                             </li>
                         </ul>
                     </nav>
-                    <a href="#/" className={`${header.menuButton}`}>
+                    <button
+                        className={`${header.menuButton} ${isMenuOpen ? 'open' : ''}`}
+                        onClick={handleOpenMenu}
+                    >
                         <img src="/menuIcon.svg" alt="menu" />
-                    </a>
+                    </button>
                 </div>
             </div>
+            <MobileMenu isMenuOpen={isMenuOpen} handleCloseMenu={handleCloseMenu}/>
         </header>
     );
 };
