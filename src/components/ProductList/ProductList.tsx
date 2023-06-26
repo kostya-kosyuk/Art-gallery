@@ -8,31 +8,15 @@ type Props = {
 const ProductList = ({ items }: Props) => {
     return (
         <div className='productList'>
-            <div className='productItem__container'>
-                <ProductItem item={{}} />
-            </div>
-            <div className='productItem__container'>
-                <ProductItem item={{}} />
-            </div>
-            <div className='productItem__container'>
-                <ProductItem item={{}} />
-            </div>
-            <div className='productItem__container'>
-                <ProductItem item={{}} />
-            </div>
-            <div className='productItem__container'>
-                <ProductItem item={{}} />
-            </div>
-            <div className='productItem__container'>
-                <ProductItem item={{}} />
-            </div>
-            <div className='productItem__container'>
-                <ProductItem item={{}} />
-            </div>
-            <div className='productItem__container'>
-                <ProductItem item={{}} />
-            </div>
+            {items.map(() => {
+                return (
+                    <div className='productItem__container'>
+                        <ProductItem item={{}} />
+                    </div>
+                )
+            })}
         </div>
+
     );
 };
 

@@ -49,7 +49,7 @@ const Header = () => {
                                     className={`${header.search__button}`}
                                     type="submit"
                                 >
-                                    <img src="./searchIconGrey.svg" alt="search" />
+                                    <img src="/searchIconGrey.svg" alt="search" />
                                 </button>
                                 <input
                                     className={`${header.search__input}`}
