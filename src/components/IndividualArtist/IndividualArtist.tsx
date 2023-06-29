@@ -52,24 +52,28 @@ const IndividualArtist = ({ id }: Props) => {
         <>
         <div className='background'>
             <img className='background__image' src="https://ik.imagekit.io/theartling/prod/products/Product/b65f440def8d42c6b3707bca90898c2f.jpg?tr=w-3330" alt="background" />
+        </div>
+        <div className='artist_profile__container'>
             <div className='avatar'>
                 <div className='avatar__background'>
                     <img className="avatar__image" src="https://ik.imagekit.io/theartling/prod/artists/Artist/e4cf285d2f4e45598c82a098dc990451.jpg?tr=w-370,r-max" alt="avatar" />
                 </div>
             </div>
-        </div>
-        <div className='artist_profile__container'>
-            <div className='profile-section profile-section--nameSection'>
-                Linda Clerget
+            <div className='flex-container'>
+                <div className='profileInfo-container'>
+                    <div className='profile-section profile-section--nameSection'>
+                        Linda Clerget
+                    </div>
+                    <section className='profile-section profile-section--information'>
+                        <p>Born: 1985</p>
+                        <p>Hometown: Fontainebleau</p>
+                        <p>Based in: Fontainebleau, France</p>
+                    </section>
+                    <section className='profile-section profile-section--about'>
+                        <ExpandableElement content={<TextComponent text={text} />} />
+                    </section>
+                </div>
             </div>
-            <section className='profile-section profile-section--information'>
-                <p>Born: 1985</p>
-                <p>Hometown: Fontainebleau</p>
-                <p>Based in: Fontainebleau, France</p>
-            </section>
-            <section className='profile-section profile-section--about'>
-                <ExpandableElement content={<TextComponent text={text}/>}/>
-            </section>
             <hr className="profile-section__space" />
             <section ref={productListRef} className='profile-section__productList'>
                 <h3 className='profile-section__title'>{
