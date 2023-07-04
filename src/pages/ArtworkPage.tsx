@@ -1,8 +1,8 @@
+import IndividualArtwork from "../components/IndividualArtwork";
+
 const ArtWorkPage = () => {
     return (
-        <div>
-            Page: ArtworkPage currently in work
-        </div>
+        <IndividualArtwork />
     );
 };
 
