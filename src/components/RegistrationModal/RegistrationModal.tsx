@@ -63,7 +63,7 @@ export const RegistrationModal:React.FC<Props> = ({ modalType, setModal }) => {
             Register as an Artist, Gallery or Artlover. Join our community and experience the unlimited possibilities of Online Gallery!
           </div>
 
-          <div className="modal__body__register">
+          {/* <div className="modal__body__register">
             Register as
 
             <div className="modal__body__register__wrapper">
@@ -80,7 +80,7 @@ export const RegistrationModal:React.FC<Props> = ({ modalType, setModal }) => {
                 />
                 Artist
               </label>
-            
+
               <label htmlFor="register_gallery">
                 <input
                   id="register_gallery"
@@ -94,7 +94,7 @@ export const RegistrationModal:React.FC<Props> = ({ modalType, setModal }) => {
                 />
                 Gallery
               </label>
-              
+
               <label htmlFor="register_artlover">
                 <input
                   id="register_artlover"
@@ -109,7 +109,7 @@ export const RegistrationModal:React.FC<Props> = ({ modalType, setModal }) => {
                 Artlover
               </label>
             </div>
-          </div>
+          </div> */}
 
           <div className="modal__body__inputs">
             <label htmlFor="inputs_name">

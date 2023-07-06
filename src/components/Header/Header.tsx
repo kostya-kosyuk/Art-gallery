@@ -63,7 +63,7 @@ const Header = () => {
                                 className={`${header.link}`}
                             >Artists</Link>
                         </li>
-                        <li className={`${header.desktop}`}>
+                        {/* <li className={`${header.desktop}`}>
                             <Link
                                 to="/auctions"
                                 className={`${header.link}`}
@@ -74,7 +74,7 @@ const Header = () => {
                                 to="/news"
                                 className={`${header.link}`}
                             >News</Link>
-                        </li>
+                        </li> */}
                         <li className={`${header.search_container}`}>
                             <Search />
                         </li>
