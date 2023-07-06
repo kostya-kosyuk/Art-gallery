@@ -43,6 +43,10 @@
 
     gap: 0px;
     row-gap: 2rem;
+
+    @include on768 {
+        gap: 2rem;
+    }
 }
 
 .titleAndAuthor {
@@ -59,6 +63,10 @@
     &__name {
         font-size: 22px;
         font-weight: bold;
+
+        @include on768 {
+            font-size: 26px;
+        }
     }
 
     &__authorLink {
@@ -73,6 +81,11 @@
 .likeContainer {
     width: 24px;
     height: 24px;
+
+    @include on768 {
+        width: 32px;
+        height: 32px;
+    }
 
     transition: scale .5s;
 
@@ -95,6 +108,10 @@
 
     grid-column: span 12 / span 12;
 
+    @include on768 {
+        grid-column: span 6 / span 6;
+    }
+
     &__image-container {
         display: flex;
         justify-content: center;
@@ -114,9 +131,15 @@
     }
 }
 
-.price {
+.info-container {
     grid-column: span 12 / span 12;
 
+    @include on768 {
+        grid-column: span 6 / span 6;
+    }
+}
+
+.price {
     display: flex;
     justify-content: space-between;
 
@@ -163,5 +186,17 @@
         padding: 6px 30px;
         margin-left: 5px;
         margin-right: 5px;
+    }
+}
+
+.mobile-only {
+    @include on768 {
+        display: none;
+    }
+}
+
+.not-mobile {
+    @media (max-width: 768px) {
+        display: none !important;
     }
 }
