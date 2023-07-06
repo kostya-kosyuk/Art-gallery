@@ -8,6 +8,8 @@ import header from './Header.module.scss';
 import { LoginModal } from "../LoginModal";
 import { RegistrationModal } from "../RegistrationModal";
 
+// import BoundLogo from './BoundLogo.svg';
+
 enum Modal {
   login = 'login',
   register = 'register',

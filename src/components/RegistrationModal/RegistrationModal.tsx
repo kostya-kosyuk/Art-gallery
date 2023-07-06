@@ -56,12 +56,12 @@ export const RegistrationModal:React.FC<Props> = ({ modalType, setModal }) => {
 
         <div className="modal__body">
           <div className="modal__body__title">
-            Join Online Gallery!
+            Join Bound Gallery!
           </div>
 
           <div className="modal__body__subtitle">
             {/* Register as an Artist, Gallery or Artlover. */}
-            Join our community and experience the unlimited possibilities of Online Gallery!
+            Join our community and experience the unlimited possibilities of Bound Gallery!
           </div>
 
           {/* <div className="modal__body__register">
@@ -160,7 +160,7 @@ export const RegistrationModal:React.FC<Props> = ({ modalType, setModal }) => {
                   setTermsIsChecked(!termsIsChecked)
                 }}
               />
-              I caccept the
+              I accept the
             </label>
             <p>
               terms and conditions
