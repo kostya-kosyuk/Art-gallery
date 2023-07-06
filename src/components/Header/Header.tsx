@@ -24,7 +24,7 @@ const Header = () => {
   const handlerRegister = () => {
     setModal(Modal.register);
   }
-  
+
   const handleCloseMenu = () => {
      setMenuOpen(false);
   };
@@ -83,7 +83,7 @@ const Header = () => {
                 <div className={`${header.menu_container}`}>
                     <nav className={`${header.nav_container}`}>
                         <ul className={`${header.nav_container__list}`}>
-                            <li>
+                            {/* <li>
                                 <a
                                     href="/pricing"
                                     className={`${header.link}`}
@@ -94,7 +94,7 @@ const Header = () => {
                                     href="/sell"
                                     className={`${header.link}`}
                                 >Sell</a>
-                            </li>
+                            </li> */}
                             <li>
                                 <button
                                   type="button"
