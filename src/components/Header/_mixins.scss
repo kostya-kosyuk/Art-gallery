@@ -73,10 +73,10 @@
 }
 
 @mixin logo-width {
-    width: map-get($header-height-map, mobile) - 10px;
+    width: map-get($header-height-map, mobile) + 10px;
 
     @media (min-width: map-get($breakpoints, tablet)) {
-        width: map-get($header-height-map, tablet) - 10px;
+        width: map-get($header-height-map, tablet) + 10px;
     }
 }
 

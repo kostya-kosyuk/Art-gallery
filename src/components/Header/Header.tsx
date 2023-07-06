@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import { Modal } from "../Modal";
 import MobileMenu from "./innerComponents/MobileMenu";
 import Search from "./innerComponents/Search";
-import logo from './logo.svg';
+import logo from './BoundLogo.svg';
 import header from './Header.module.scss';
 import { LoginModal } from "../LoginModal";
 import { RegistrationModal } from "../RegistrationModal";
