@@ -60,7 +60,8 @@ export const RegistrationModal:React.FC<Props> = ({ modalType, setModal }) => {
           </div>
 
           <div className="modal__body__subtitle">
-            Register as an Artist, Gallery or Artlover. Join our community and experience the unlimited possibilities of Online Gallery!
+            {/* Register as an Artist, Gallery or Artlover. */}
+            Join our community and experience the unlimited possibilities of Online Gallery!
           </div>
 
           {/* <div className="modal__body__register">
