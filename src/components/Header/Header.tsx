@@ -3,6 +3,12 @@ import header from './Header.module.scss';
 import { useState } from "react";
 import MobileMenu from "./innerComponents/MobileMenu";
 import Search from "./innerComponents/Search";
+import logo from './logo.svg';
+
+enum Modal {
+  login = 'login',
+  register = 'register',
+}
 
 const Header = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
