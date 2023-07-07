@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom";
-import header from './Header.module.scss';
 import { useState } from "react";
+import { Link } from "react-router-dom";
+// import { Modal } from "../Modal";
 import MobileMenu from "./innerComponents/MobileMenu";
 import Search from "./innerComponents/Search";
 import logo from './logo.svg';
+import header from './Header.module.scss';
+import { LoginModal } from "../LoginModal";
+import { RegistrationModal } from "../RegistrationModal";
+
+// import BoundLogo from './BoundLogo.svg';
 
 enum Modal {
   login = 'login',
@@ -11,17 +16,27 @@ enum Modal {
 }
 
 const Header = () => {
-    const [isMenuOpen, setMenuOpen] = useState(false);
+  const [modal, setModal] = useState<string>('');
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-    const handleCloseMenu = () => {
-        setMenuOpen(false);
-    };
+  const handlerLogin = () => {
+    setModal(Modal.login);
+  }
 
-    const handleOpenMenu = () => {
-        setMenuOpen(true);
-    };
+  const handlerRegister = () => {
+    setModal(Modal.register);
+  }
 
-    return (
+  const handleCloseMenu = () => {
+     setMenuOpen(false);
+  };
+
+  const handleOpenMenu = () => {
+     setMenuOpen(true);
+  };
+
+  return (
+     <>
         <header className={`${header.header} container`}>
             <div className={`${header.header_inHeader}`}>
                 <div className={`${header.logo}`}>
@@ -31,7 +46,7 @@ const Header = () => {
                     >
                         <img
                             className={`${header.logo__link__image}`}
-                            src="https://onlinegallery.art/_webblocks/images/logo.svg"
+                            src={logo}
                             alt="logo"
                         />
                     </Link>
@@ -50,7 +65,7 @@ const Header = () => {
                                 className={`${header.link}`}
                             >Artists</Link>
                         </li>
-                        <li className={`${header.desktop}`}>
+                        {/* <li className={`${header.desktop}`}>
                             <Link
                                 to="/auctions"
                                 className={`${header.link}`}
@@ -61,7 +76,7 @@ const Header = () => {
                                 to="/news"
                                 className={`${header.link}`}
                             >News</Link>
-                        </li>
+                        </li> */}
                         <li className={`${header.search_container}`}>
                             <Search />
                         </li>
@@ -70,7 +85,7 @@ const Header = () => {
                 <div className={`${header.menu_container}`}>
                     <nav className={`${header.nav_container}`}>
                         <ul className={`${header.nav_container__list}`}>
-                            <li>
+                            {/* <li>
                                 <a
                                     href="/pricing"
                                     className={`${header.link}`}
@@ -81,18 +96,24 @@ const Header = () => {
                                     href="/sell"
                                     className={`${header.link}`}
                                 >Sell</a>
+                            </li> */}
+                            <li>
+                                <button
+                                  type="button"
+                                  className={`${header.button}`}
+                                  onClick={handlerRegister}
+                                >
+                                  Register
+                                </button>
                             </li>
                             <li>
-                                <a
-                                    href="/register"
-                                    className={`${header.button}`}
-                                >Register</a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/login"
-                                    className={`${header.link}`}
-                                >Login</a>
+                                <button
+                                  type="button"
+                                  className={`${header.link}`}
+                                  onClick={handlerLogin}
+                                >
+                                  Login
+                                </button>
                             </li>
                             <li className={`${header.searchButton_container}`}>
                                 <a
@@ -114,6 +135,15 @@ const Header = () => {
             </div>
             <MobileMenu isMenuOpen={isMenuOpen} handleCloseMenu={handleCloseMenu}/>
         </header>
+
+        {modal === Modal.register && (
+          <RegistrationModal modalType={modal} setModal={setModal} />
+        )}
+
+        {modal === Modal.login && (
+          <LoginModal modalType={modal} setModal={setModal} />
+        )}
+      </>
     );
 };
 
