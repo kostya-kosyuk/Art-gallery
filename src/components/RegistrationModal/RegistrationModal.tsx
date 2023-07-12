@@ -44,6 +44,8 @@ export const RegistrationModal:React.FC<Props> = ({ modalType, setModal }) => {
 
   return (
     <div className='modal'>
+      <div className="modal__area" onClick={handlerClose}></div>
+      
       <div className="modal__container">
         <div className="modal__header">
           <img src={logo} alt="logo" className='modal__header__img' />
