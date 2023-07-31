@@ -1,23 +1,26 @@
 import { Route, Routes } from 'react-router-dom';
+
+import { Header } from './components/Header';
+import { Tools } from './components/Tools';
+
 import { ArtistsPage } from './pages/ArtistsPage';
 import { Artworks } from './pages/Artworks/Artworks';
 import Checkout from './pages/Checkout';
 import Favorites from './pages/Favorites';
-import PageNotFound from './pages/PageNotFound';
-import Header from './components/Header';
-import { Tools } from './components/Tools';
 import IndividualArtistPage from './pages/IndividualArtistPage';
-import IndividualArtwork from './components/IndividualArtwork';
 import ArtWorkPage from './pages/ArtworkPage';
+// import IndividualArtwork from './components/IndividualArtwork';
 
-function App() {
+import PageNotFound from './pages/PageNotFound';
+
+export const App = () => {
   return (
     <>
       <Header />
 
       <Tools />
 
-      <main>
+      {/* <main>
         <div>
           <Routes>
             <Route path="/" element={<Artworks />} />
@@ -37,11 +40,9 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
-      </main>
+      </main> */}
 
       {/* <Footer /> */}
     </>
   );
-}
-
-export default App;
+};

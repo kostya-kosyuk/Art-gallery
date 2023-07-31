@@ -46,7 +46,7 @@ export const Tools: React.FC = () => {
         Filters
       </button>
 
-      <div className="tools__category category">
+      {/* <div className="tools__category category">
         <ul className='category__list'>
           {allCategories.length && allCategories.map((category, i) => (
               <li
@@ -69,7 +69,7 @@ export const Tools: React.FC = () => {
             )
           )}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

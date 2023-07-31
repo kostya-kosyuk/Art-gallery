@@ -15,7 +15,7 @@ enum Modal {
   register = 'register',
 }
 
-const Header = () => {
+export const Header: React.FC = () => {
   const [modal, setModal] = useState<string>('');
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -28,15 +28,15 @@ const Header = () => {
   }
 
   const handleCloseMenu = () => {
-     setMenuOpen(false);
+    setMenuOpen(false);
   };
 
   const handleOpenMenu = () => {
-     setMenuOpen(true);
+    setMenuOpen(true);
   };
 
   return (
-     <>
+    <>
         <header className={`${header.header} container`}>
             <div className={`${header.header_inHeader}`}>
                 <div className={`${header.logo}`}>
@@ -51,6 +51,7 @@ const Header = () => {
                         />
                     </Link>
                 </div>
+
                 <nav className={`${header.nav_container}`}>
                     <ul className={`${header.nav_container__list}`}>
                         <li className={`${header.desktop}`}>
@@ -99,20 +100,20 @@ const Header = () => {
                             </li> */}
                             <li>
                                 <button
-                                  type="button"
-                                  className={`${header.button}`}
-                                  onClick={handlerRegister}
+                                    type="button"
+                                    className={`${header.button}`}
+                                    onClick={handlerRegister}
                                 >
-                                  Register
+                                    Register
                                 </button>
                             </li>
                             <li>
                                 <button
-                                  type="button"
-                                  className={`${header.link}`}
-                                  onClick={handlerLogin}
+                                    type="button"
+                                    className={`${header.link}`}
+                                    onClick={handlerLogin}
                                 >
-                                  Login
+                                    Login
                                 </button>
                             </li>
                             <li className={`${header.searchButton_container}`}>
@@ -137,14 +138,12 @@ const Header = () => {
         </header>
 
         {modal === Modal.register && (
-          <RegistrationModal modalType={modal} setModal={setModal} />
+            <RegistrationModal modalType={modal} setModal={setModal} />
         )}
 
         {modal === Modal.login && (
-          <LoginModal modalType={modal} setModal={setModal} />
+            <LoginModal modalType={modal} setModal={setModal} />
         )}
-      </>
+    </>
     );
 };
-
-export default Header;
